@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Signup
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page6">
+  <form id="signup-form2">
+    <ion-list id="signup-list2">
+      <ion-item id="signup-input4">
+        <ion-label floating>
+          Email
+        </ion-label>
+        <ion-input [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" type="email" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item id="signup-input5">
+        <ion-label floating >
+          Password
+        </ion-label>
+        <ion-input [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" type="password" placeholder=""></ion-input>
+      </ion-item>
+    </ion-list>
+    <button (click)="signup(user)"  id="signup-button3" ion-button color="stable" block style="color:#000000;">
+      Sign up
+    </button>
+    <div id="signup-markdown2" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        if you already have an account login here
+      </p>
+    </div>
+  </form>
+  <button id="signup-button4" ion-button color="dark" block on-click="goToLogin()">
+    Login
+  </button>
+</ion-content>

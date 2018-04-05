@@ -1,0 +1,23 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+       </button>
+      <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <p>Welcome to sMugg: {{ (profileData)?.firstName }}</p>
+
+  <p>Place your order Now</p>
+
+
+<button ion-button dark block (click)="signOut(User)">Logout</button>
+
+  
+
+</ion-content>

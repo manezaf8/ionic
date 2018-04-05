@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>User Account</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h3>Edit your profile</h3>
+   <ion-item>
+     <ion-label floating>Username</ion-label>
+     <ion-input type="text" required [(ngModel)]="profile.username" [ngModelOptions]="{standalone: true}"></ion-input>
+   </ion-item>
+
+   <ion-item>
+    <ion-label floating>First Name</ion-label>
+    <ion-input type="text" required [(ngModel)]="profile.firstName" [ngModelOptions]="{standalone: true}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Last Name</ion-label>
+    <ion-input type="text" required [(ngModel)]="profile.lastName" [ngModelOptions]="{standalone: true}"></ion-input>
+  </ion-item>
+
+  <button ion-button dark block (click)="createProfile(profile)">Submit profile</button>
+</ion-content>

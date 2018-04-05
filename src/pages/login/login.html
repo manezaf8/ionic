@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      sMugg
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page5" style="background-color:#D4D4D4;">
+
+  
+
+    <h2 id="login-heading1" style="color:#000000;text-align:center;
+     margin-bottom: 10px;">
+      Welcome to sMugg
+    </h2>
+
+    <div class="spacer" style="width:300px;height:21px;" id="login-spacer2"></div>
+    <div id="login-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
+     
+      <h4 style="color:#000000; text-align: center; margin-bottom: 120px;
+       padding: 10px 10px;">
+        Login here to place your order with sMugg
+      </h4>
+
+    </div>
+    <div class="spacer" style="width:300px;height:26px;" id="login-spacer3"></div>
+    
+    <form [formGroup]="formgroup" id="login-form1" >
+    <ion-list id="login-list1">
+      <ion-item id="login-input1">
+        <ion-label floating>
+          Email
+        </ion-label>
+        <ion-input type="email" formControlName="email"  [(ngModel)]="user.email" ></ion-input>
+      </ion-item>
+      
+      <ion-item id="login-input2">
+        <ion-label floating>
+          Password
+        </ion-label>
+        <ion-input type="password" formControlName="password"  [(ngModel)]="user.password" ></ion-input>
+      </ion-item>
+   
+    </ion-list>
+    <div class="spacer" style="width:300px;height:30px;" id="login-spacer1"></div>
+    <button (click)="login(user)" id="login-button1" ion-button color="stable" block style="color:#000000;">
+      Log in
+    </button>
+    <button id="login-button2" ion-button clear color="positive" block on-click="goToSignup()">
+      Or create an account
+    </button>
+  </form>
+</ion-content>
